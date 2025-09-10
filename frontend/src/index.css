@@ -1,0 +1,36 @@
+/* frontend/src/index.css (Full-Screen Masterpiece) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
+
+:root {
+  --font-color: #ffffff;
+  --bg-gradient: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f0c29);
+  --container-bg: transparent; /* The container is now part of the background */
+  --container-border: rgba(192, 132, 252, 0.3);
+  --accent: #c084fc;
+  --accent-glow: 0 0 30px rgba(192, 132, 252, 0.7);
+  --text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.light {
+  --font-color: #111;
+  --bg-gradient: linear-gradient(-45deg, #e0c3fc, #8ec5fc, #e0c3fc, #8ec5fc);
+  --container-border: rgba(192, 132, 252, 0.5);
+}
+
+body {
+  margin: 0;
+  padding: 0; /* REMOVED PADDING */
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-gradient);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: var(--font-color);
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
